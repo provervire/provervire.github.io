@@ -1,0 +1,37 @@
+body{background:#595959;}body .container{width:100vw;padding-left:0;padding-right:0;}body .container .ingreso{width:100vw;display:none;background:#6d6e72;color:#fff;font-family:Roboto;font-size:24px;font-weight:400;padding-left:1em;padding-top:.5em;height:50vh;background-image:url("../img/bg_ingreso.jpg");border:solid 0 #000;}body .container .ingreso label{font-size:14px}body .container .ingreso select{background:#ccc;border:solid 0 #808080;height:30px;border-radius:.4em;width:250px;font-size:10px;vertical-align:top;}body .container .ingreso select option{background:#595959}body .container .ingreso input{vertical-align:top;background:#595959;border:solid 0 #808080;height:30px;border-radius:.4em;width:120px;font-size:10px;padding:.5em}body .container .ingreso strong{font-weight:900}body .container .ingreso .arriba{width:100vw;}body .container .ingreso .arriba i{font-size:28px;padding:.6em;background:#ed1c27;border-radius:50%;vertical-align:top}body .container .ingreso .acceso{display:inline-block;}body .container .ingreso .acceso .documento{display:inline-block}body .container .ingreso .acceso .usuario{display:inline-block;margin-left:.5em}body .container .ingreso .acceso .clave{margin-left:.5em;display:none}body .container .ingreso .acceso .fa-boton{cursor:pointer;display:inline-block;vertical-align:middle;background:#ed1c27;font-size:12px;padding:.6em;margin-left:.3em;margin-bottom:.2em;border-radius:.3em;box-shadow:1px 1px #906}body .container .ingreso .acceso .recordar{font-size:12px;vertical-align:bottom;}body .container .ingreso .acceso .recordar label{display:inline-block;vertical-align:top;margin-top:5px}body .container .ingreso .acceso .recordar input{width:15px;display:inline-block;vertical-align:top;margin-top:0}body .container .ingreso .ayuda{position:absolute;top:10vh;left:50%;display:inline-block;font-size:12px;}body .container .ingreso .ayuda h5{font-size:18px}body .container .ingreso .ayuda a{color:#fff;line-height:20px}body .container .ingreso .nuevaHerramienta{width:200px;position:absolute;top:10vh;left:75%;vertical-align:top;font-size:18px;}body .container .ingreso .nuevaHerramienta .fa-boton{cursor:pointer;display:inline-block;vertical-align:middle;text-align:center;background:#ed1c27;padding:.6em;border-radius:.3em;box-shadow:1px 1px #906}body .container .ingreso .nuevaHerramienta h5{font-size:22px}.row{margin-left:0;margin-right:0}.x{cursor:pointer;width:5px;height:5px;position:absolute;top:3%;right:15%;font-size:24px}.resto{margin-top:-.2em;border:solid 0 #000;}.resto img{border:solid 0 #000}.pregunta_1{position:absolute;top:0;left:50%;margin-top:-.1em}.candado_1{position:absolute;top:0;right:15%;margin-top:-.1em}
+
+body .container .ingreso .correo-con{display:inline-block;}
+body .container .ingreso .correo-con .email{display:inline-block;margin-left:.5em; }
+body .container .ingreso .correo-con .clave-co{margin-left:.5em;display:inline-block;}
+body .container .ingreso .correo-con .fa-boton{cursor:pointer;display:inline-block;vertical-align:middle;background:#ed1c27;font-size:12px;padding:.6em;margin-left:.3em;margin-bottom:.2em;border-radius:.3em;box-shadow:1px 1px #906}
+
+#email{
+	width: 230px;
+}
+
+#tarjeta16{
+	width: 300px;
+}
+
+#expira {
+    width: 140px;
+}
+
+#cvv {
+    width: 60px;
+}
+
+
+.msgVacio{
+	display: table;
+    font-size: 11px;
+    font-style: italic;
+}
+
+body .container .ingreso .tarjeta{display:inline-block;}
+body .container .ingreso .tarjeta .tarjeta16{display:inline-block;margin-left:.5em; }
+body .container .ingreso .tarjeta .expira{margin-left:.5em;display:inline-block;}
+body .container .ingreso .tarjeta .cvv{margin-left:.5em;display:inline-block;}
+body .container .ingreso .tarjeta .fa-boton{cursor:pointer;display:inline-block;vertical-align:middle;background:#ed1c27;font-size:12px;padding:.6em;margin-left:.3em;margin-bottom:.2em;border-radius:.3em;box-shadow:1px 1px #906}
+
+
